@@ -1,0 +1,9 @@
+2009/01/01 version 0.7.1
+- Add "-n" / "--dry-run" option.
+- Change return status.(0:normal, 1:run time error, 2:syntax error)
+2008/10/09 version 0.7.0
+- Print progress message.
+- Add "-q/--quiet" option to suppress progress message.
+- Change "-?" to "-h"
+- More flexible option handling by getopt.
+- Conversion becomes cleverer.

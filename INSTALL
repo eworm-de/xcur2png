@@ -1,0 +1,18 @@
+To build xcur2png from source, you need png.h and Xcursor.h
+ソースからビルドするにはlibpngとlibXcursorのヘッダファイルが必要です。
+in appropreate path. 
+
+These header files are in libpng12-dev and libxcursor-dev package on Debian, in libpng-devel and libXcursor-devel package on Fedora.
+Debianではlibpng12-devとlibxcursor-dev、Fedoraではlibpng-develとlibXcursor-develに含まれています。
+
+
+After installing these headers, type:
+ヘッダファイルをインストールしたら、コマンドを打ってください:
+
+$ cd xcur2png-0.7.1
+$ ./configure     #(Add "--prefix=/usr" if you want.)
+$ make
+$ sudo make install
+
+That's all.
+以上です。

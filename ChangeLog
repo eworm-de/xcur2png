@@ -1,0 +1,45 @@
+2009/01/01
+- Add "-n" / "--dry-run" option.
+- Change return status.(0:normal, 1:run time error, 2:syntax error)
+- Add debian directory in the tar ball.
+2008/10/09 version 0.7
+- Version bump and update documents, spec, and etc...
+2008/10/07
+- Use getopt(3) to command option handling.
+- Change "-?" to "-h"
+- Add "-q" / "--quiet" option to suppress progress.
+2008/10/05
+- Cleverer conversion.
+2008/10/03
+- Add progress output.
+2008/09/23 version 0.6.3
+- Fix unexpected exiting when "-d" is not specified.
+2008/09/22 version 0.6.2
+- "-c" option accepts directory again.
+- Code clean up.
+2008/09/18 version 0.6.1
+- Fix "-c -" dosen't output to stdout.
+2008/09/16 version 0.6
+- Rewrite from scratch because previous source code was so teribble.
+- "-c" option don't accept directory now. (sorry)
+- Add "-d" option. You can fix on the directory where PNG images
+   output.
+- Add "-i" option. You can adopt first suffix of PNG images.
+   This is useful to combine cursors to make a mutli-sized cursor.
+- Return value is changed. Now xcur2png returns the number of output
+   PNG images, and returns negative if fail.
+- Some small fixes. (use errno, etc...)
+- Documents are updated. 
+2008/08/15
+- Fix buffer overflow.
+2008/08/08 version 0.5.1
+2008/08/04
+- Change the format of conf-file.
+2008/08/02 version 0.5
+- Fix exit status of -V/--version & -?/--help option.
+- Fix -V/--version error.
+- Fix image path of conf when conf is generated in non current directory.
+- -c/--conf option can set existent direcroty.
+- Change code style.
+2008/07/30 version 0.4.1 - Modify manual & README.
+2008/07/26 version 0.4 - Initial release.

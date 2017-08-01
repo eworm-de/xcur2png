@@ -1,0 +1,83 @@
+.\"
+.\"Copyright (C) 2008 tks
+.\"
+.\"This program is free software: you can redistribute it and/or modify
+.\"it under the terms of the GNU General Public License as published by
+.\"the Free Software Foundation, either version 3 of the License, or
+.\"(at your option) any later version.
+.\"
+.\"This program is distributed in the hope that it will be useful,
+.\"but WITHOUT ANY WARRANTY; without even the implied warranty of
+.\"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+.\"GNU General Public License for more details.
+.\"
+.\"You should have received a copy of the GNU General Public License
+.\"along with this program.  If not, see <http://www.gnu.org/licenses/>.
+.\"
+.TH XCUR2PNG 1 2008-10-09 GNU
+.SH NAME
+xcur2png \- take PNG images from Xcursor and generate xcursorgen
+config-file
+.SH SYNOPSIS
+.B "xcur2png"
+[ \fB\-V\fP ] [ \fB\-\-version\fP ]
+.sp
+.B "xcur2png"
+[ \fB\-h\fP ] [ \fB\-\-help\fP ]
+.sp
+.B "xcur2png"
+[ \fB\-c\fP \fIconf\-path\fP ] [ \fB\-\-conf\fP=\fIconf\-path\fP ] 
+[ \fB\-d\fP \fIdir\-path\fP ] [ \fB\-\-directory\fP=\fIdir\-path\fP ] 
+[ \fB\-i\fP \fIsuffix\fP ] [ \fB\-\-initial-suffix\fP=\fIsuffix\fP ] 
+[ \fB\-q\fP ] [ \fB\-\-quiet\fP ] [ \fB\-n\fP ] [ \fB\-\-dry\-run\fP ]
+\fIXcursor-file
+
+.SH DESCRIPTION
+Xcur2png takes PNG images from \fIXcursor-file\fP, 
+and generate config\-file which is reusable by \fBxcursorgen\fP(1).
+To put it simply, it is converter from X cursor to PNG image.
+.P
+\fIXcursor-file\fP is a path to existent Xcursor file.
+Multiple \fIXcursor-file\fP is not supported.
+Generated PNG images are saved in current directory.
+
+.SH OPTIONS
+.TP 8
+.BR \-V ", " \-\-version
+Display the version number and exit with status 0.
+.TP 8
+.BR \-h ", " \-\-help
+Display the usage message and exit with status 0.
+.TP 8
+.BR "\-c \fIconf\-path\fP" ", " "\-\-conf=\fIconf\-path\fP"
+Set output path of config\-file.
+If "\-" is specified, \fBstdout\fP(3) is used. If not specified,
+[file name of \fIXcursor-file\fP].conf is used. If "\fIconf\-path\fP"
+is directory, config-file is saved under specified directory as 
+[file name of \fIXcursor-file\fP].conf.
+.TP 8
+.BR "\-d \fIdir\-path\fP" ", " "\-\-directory=\fIdir\-path\fP"
+Set the path of a directory which PNG images are saved in.
+If not specified, current directory is used.
+.TP 8
+.BR "\-i \fIsuffix\fP" ", " "\-\-initial\-suffix=\fIsuffix\fP"
+Set the initial suffix of PNG images to \fIsuffix\fP.
+\fIsuffix\fP must be positive integer and no more than 999.
+When suffix goes up to 999, xcur2png exits with negative status.
+.TP 8
+.BR \-q ", " \-\-quiet
+Suppress progress message.
+.TP 8
+.BR \-n ", " \-\-dry\-run
+Do not output PNG images and config\-data to files. Config\-data is
+sent to stdout and progress message is suppressed.
+
+.SH EXIT STATUS
+.PP 8
+.B xcur2png
+returns the number of output PNG images if the conversion
+successfully finished and \fIconfig\-file\fP generated. 
+If error occurs, xcur2png returns negative.
+
+.SH "SEE ALSO"
+xcursorgen(1)

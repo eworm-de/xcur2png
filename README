@@ -1,0 +1,45 @@
+# xcur2png README
+*Summary
+
+xcur2png is a program which let you take PNG image from X cursor, and generate config-file which is reusable by xcursorgen. To put it simply, it is converter from X cursor to PNG image.
+xcur2pngはXカーソルからPNG画像を取り出し、xcursorgenで再利用できるconfigファイルを作成するプログラムです。つまりXカーソルをPNG画像に変換するコンバータとも言えます。
+
+To use this program, you must appropriately install "libpng" and "libXcursor" library .
+このプログラムを使用するには、libpngとlibXcursorライブラリが適切にインストールされている必要があります。
+
+
+*Install
+
+Please read INSTALL in this source package.
+同封のINSTALLに書いてあります。
+
+
+*Usage
+
+please read output of 'xcur2png --help' or 'man xcur2png'
+'xcur2png --help'か'man xcur2png'を参照してください。
+
+
+*License
+
+GPLv3
+
+
+*X11 Mouse Cursor plug-in for GIMP(gimp-xmc-plugin)
+
+I wrote a plug-in to edit X cursor by GIMP.
+GIMPでXカーソルを編集できるよう、プラグインを作りました。
+
+You can download it from
+http://www.gimpstuff.org/content/show.php/X11+Mouse+Cursor+(XMC)+plug-in?content=94503
+gimpstuff.orgからダウンロード出来ます。
+
+
+*Contact
++Message board
+	http://db.zaq.ne.jp/asp/bbs/sutv_ckczb209_1
++Mail
+	tksmashiw[a t m a rk]gmail.com
+
+If you find bugs, misspelling, etc.. feel free to contact me.
+バグ報告、ミススペルなど発見したら、お気軽にご連絡ください。

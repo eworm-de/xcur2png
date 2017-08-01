@@ -1,0 +1,16 @@
+Source: xcur2png
+Section: x11
+Priority: optional
+Maintainer: tks mashiw <tksmashiw@gmail.com>
+Build-Depends: debhelper (>= 7), autotools-dev, automake, autoconf, libxcursor-dev, pkg-config, libpng12-dev
+Standards-Version: 3.8.0
+
+Package: xcur2png
+Architecture: any
+Depends: ${shlibs:Depends}
+Suggests: x11-apps
+Description: Take PNG images from Xcursor and generate xcursorgen config-file 
+ xcur2png is a program which let you take PNG image from X cursor,
+ and generate config-file which is reusable by xcursorgen.
+ To put it simply, it is converter from X cursor to PNG image.
+
