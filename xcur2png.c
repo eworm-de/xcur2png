@@ -586,9 +586,9 @@ int writePngFileFromXcur (const XcursorDim width, const XcursorDim height,
     unsigned int red = (pixels[i]>>16) & 0xff;
     unsigned int green = (pixels[i]>>8) & 0xff;
     unsigned int blue = pixels[i] & 0xff;
-    red = (div (red * 256, alpha).quot) & 0xff;
-    green = (div (green * 256,  alpha).quot) & 0xff;
-    blue = (div (blue * 256, alpha).quot) & 0xff;
+    red = (div (red * 255, alpha).quot) & 0xff;
+    green = (div (green * 255,  alpha).quot) & 0xff;
+    blue = (div (blue * 255, alpha).quot) & 0xff;
     pix[i] = (alpha << 24) + (red << 16) + (green << 8) + blue;
   }
 
