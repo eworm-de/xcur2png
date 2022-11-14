@@ -1,0 +1,7 @@
+[Desktop Entry]
+Categories=Utility;
+Name=Xcur2png
+Type=Application
+Exec=xcur2png %u
+Icon=xcur2png
+X-AppImage-Version=f582d64

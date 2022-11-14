@@ -5,3 +5,7 @@ AM_CFLAGS = @XCUR2PNG_CFLAGS@
 dist_man_MANS = xcur2png.1
 EXTRA_DIST = xcur2png.spec
 SUBDIRS = debian
+
+appimage:
+	linuxdeploy -e xcur2png --deploy-deps-only=AppDir --appdir=AppDir -o appimage
+	appimagetool -s -n AppDir
