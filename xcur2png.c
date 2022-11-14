@@ -19,6 +19,7 @@
 #include <config.h>
 
 #define _ATFILE_SOURCE
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -38,8 +39,8 @@
 
 #define PROGRESS_SHARPS 50 /* total number of progress sharps */
 
-int quiet = 0; /* 1: output is quiet, 0: not quiet */
-int dry_run = 0; /* 1:don't output PNGs and conf is output to stdout. */
+bool quiet = 0; /* 1: output is quiet, 0: not quiet */
+bool dry_run = 0; /* 1:don't output PNGs and conf is output to stdout. */
 
 #define VERBOSE_PRINT(...) \
   if (!quiet) { fprintf (stderr, __VA_ARGS__); }
@@ -92,8 +93,8 @@ void parseOptions (int argc, char* argv[], char** confp,
   int ret;
   extern char *optarg;
   extern int optind;
-  extern int quiet;
-  extern int dry_run;
+  extern bool quiet;
+  extern bool dry_run;
   const struct option longopts[] =
   {
     {"version",         no_argument,            NULL,   'V'},
@@ -671,7 +672,7 @@ int saveConfAndPNGs (const XcursorImages* xcIs, const char* xcurFilePart, int su
   int ret;
   int count = 0;
   char pngName[PATH_MAX] = {0};
-  extern dry_run;
+  extern bool dry_run;
   
   //Write comment on config-file.
   fprintf (conffp,"#size\txhot\tyhot\tPath to PNG image\tdelay\n");
