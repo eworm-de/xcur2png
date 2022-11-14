@@ -1,11 +1,11 @@
 #                                               -*- Autoconf -*-
 # Process this file with autoconf to produce a configure script.
 
-AC_PREREQ(2.61)
-AC_INIT(xcur2png, 0.7.1, tksmashiw@gmail.com)
+AC_PREREQ([2.71])
+AC_INIT([xcur2png],[0.7.1],[tksmashiw@gmail.com])
 AM_INIT_AUTOMAKE
 AC_CONFIG_SRCDIR([xcur2png.c])
-AC_CONFIG_HEADER([config.h])
+AC_CONFIG_HEADERS([config.h])
 
 # Checks for programs.
 AC_PROG_CC
